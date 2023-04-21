@@ -12,7 +12,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export PORT=8000 && npm run syro-setup && npm run start-react-app",
+    "syro-setup": "syro login -t 29qMCRys6fPggFcE -p XuUSE2SfbaSA && syro pull",
+    "start-react-app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
